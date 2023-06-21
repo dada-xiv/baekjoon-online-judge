@@ -27,6 +27,7 @@ int isGroupWord(char st[], int stLen){
     //stLen = strlen(st);
 
     buffIdx = 0;
+    ch = ' ';
     for(int i=0;i<stLen;i++){
         if(st[i]!=ch){
             for(int j=0;j<buffIdx;j++){
