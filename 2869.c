@@ -13,36 +13,41 @@
 첫째 줄에 달팽이가 나무 막대를 모두 올라가는데 며칠이 걸리는지 출력한다.
  */
 
+/*
+double ceil_(double x) {
+    // Integer part
+    int integerPart = (int)x; 
+    // If there is a fractional part
+    if (x > integerPart) { 
+        integerPart++;
+    }
+
+    return (double)integerPart;
+}
+*/
+
 #include <stdio.h>
+#include <math.h>
 
 int main(){
     int A, B, V;
-    int reach = 0;
     int perDay;
-    int quotient;
-    int remainder;
+    int VB;
+    long int res;
 
     scanf("%d %d %d", &A, &B, &V);
 
-    perDay = A - B;
+    VB = V-B;
+    perDay = A-B;
 
-    quotient = V/perDay;
-    remainder = V%perDay;
-
-    printf("%d = %d day x %d + %d\n", V, quotient, perDay, remainder);
-    if(remainder != 0){
-        if(A >= V){
-            printf("D-day : %d\n", 1);
-        }else{
-            printf("D-day : %d\n", quotient+1);
-        }
+    if(perDay==1){
+        res = VB/perDay;
     }else{
-        if(quotient-perDay+A >= V){
-            printf("!D-day : %d\n", quotient-A+perDay);
-        }else{
-            printf("D-day : %d\n", quotient);
-        }
+        // trick : (VB-1)/perDay+1;
+        res = (long int)ceil((double)VB/perDay);
     }
+
+    printf("%ld", res);
 
     return 0;
 }
