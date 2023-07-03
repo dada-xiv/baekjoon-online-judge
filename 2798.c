@@ -34,7 +34,7 @@ int main(void){
         scanf("%d", &a[i]);
     }
 
-    // Permutation (N, 3)
+    // Combination (N, 3)
     for(int i=0;i<N-2;i++){
         for(int j=i+1;j<N-1;j++){
             for(int k=j+1;k<N;k++){
