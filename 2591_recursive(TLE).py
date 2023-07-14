@@ -15,37 +15,19 @@
 첫 줄에 가능한 카드 배열이 몇 개인지를 출력한다.
 '''
 
-'''
-for c in input():
-    a.append(int(c))
-print(a)
-'''
+def cntWays(s):
+    lenS = len(s)
+    if lenS == 0:
+        return 1
+
+    count = 0
+    for i in range(1, min(3, lenS+1)):
+        prefix = s[:i]
+        suffix = s[i:]
+        if (prefix[0] != '0' and int(prefix) <= 34):
+            count += cntWays(suffix)
+
+    return count
 
 a = input()
-lenA = len(a)
-arr = list()
-max = 34
-
-start = 0
-end = 0
-
-for i in range(lenA-1):
-    if a[i] > a[i+1]:
-        if a[i+1]=='0':
-            end = i+2
-            arr.append(a[start:end])
-            start = end
-        else:
-            end = i+1
-            #print(a[start:end])
-            arr.append(a[start:end])
-            start = end
-
-if end < lenA:
-    end = lenA
-    #print(a[start:end])
-    arr.append(a[start:end])
-
-print(arr)
-print(arr[0])
-
+print(cntWays(a))
