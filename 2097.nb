@@ -1,0 +1,30 @@
+In[5]:= 
+ClearAll["Global`*"];
+For[n=1,n<=25,n++,
+Print[n,":", Round[Sqrt[n]//N]]
+]
+During evaluation of In[5]:= 1:1
+During evaluation of In[5]:= 2:1
+During evaluation of In[5]:= 3:2
+During evaluation of In[5]:= 4:2
+During evaluation of In[5]:= 5:2
+During evaluation of In[5]:= 6:2
+During evaluation of In[5]:= 7:3
+During evaluation of In[5]:= 8:3
+During evaluation of In[5]:= 9:3
+During evaluation of In[5]:= 10:3
+During evaluation of In[5]:= 11:3
+During evaluation of In[5]:= 12:3
+During evaluation of In[5]:= 13:4
+During evaluation of In[5]:= 14:4
+During evaluation of In[5]:= 15:4
+During evaluation of In[5]:= 16:4
+During evaluation of In[5]:= 17:4
+During evaluation of In[5]:= 18:4
+During evaluation of In[5]:= 19:4
+During evaluation of In[5]:= 20:4
+During evaluation of In[5]:= 21:5
+During evaluation of In[5]:= 22:5
+During evaluation of In[5]:= 23:5
+During evaluation of In[5]:= 24:5
+During evaluation of In[5]:= 25:5
