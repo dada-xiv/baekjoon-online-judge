@@ -12,5 +12,5 @@ N으로 나누었을 때 나머지와 몫이 같은 모든 자연수의 합을 �
 n = int(input())
 sum = 0
 for k in range(1, n):
-  sum+=k*n+k
+  sum += k*n+k
 print(sum)
